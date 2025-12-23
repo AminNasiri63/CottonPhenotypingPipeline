@@ -33,6 +33,24 @@ For each image, the pipeline performs the following steps:
 ## Project Structure
 
 ```
+
+CottonPhenotypingPipeline/
+├── src/
+│   ├── dlmodel/
+│   ├── domain/
+│   ├── application/
+│   ├── infrastructure/
+│   ├── presentation/
+│   ├── config/
+│   └── main.py
+│
+├── samples/
+├── results/
+├── requirements.txt
+└── README.md
+
+
+
 .
 ├── domain/           # Core entities and abstract interfaces
 ├── application/      # Pipeline orchestration and use cases
