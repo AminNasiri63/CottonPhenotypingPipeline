@@ -77,10 +77,24 @@ dataset_root/
 ```
 # Notes:
 - Each top-level folder (e.g., sample_001) represents a field plot, location, or experimental unit.
-- Image files are stored inside the images/ subfolder.
-- GPS metadata is stored separately in a corresponding gps/ subfolder.
+- Image files are stored inside the ImageData/subfolder.
+- GPS metadata is stored separately in a corresponding GPSData/subfolder.
 - The pipeline matches images to GPS information based on their parent folder.
 - Folder depth can be extended (e.g., by date or treatment), as long as the relative images/ ↔ gps/ relationship is preserved.
+
+# GPS File Format
+
+Each GPS file provides geographic coordinates for the corresponding images.
+
+### Format
+
+The GPS file is a **plain text or CSV file** where each row corresponds to a single image and follows this format:
+
+```
+longitude   latitude    time
+-88.85086167 35.631695  10:31:42
+```
+
 
 
 ---
