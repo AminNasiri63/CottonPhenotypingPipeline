@@ -121,3 +121,10 @@ Only the **`HH:MM:SS`** component of the filename is used for synchronization wi
 
 ---
 
+## Installation
+
+```
+git clone <repository-url>
+cd cotton-phenotyping
+pip install -r requirements.txt
+```
