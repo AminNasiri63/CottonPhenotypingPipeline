@@ -91,7 +91,7 @@ Each GPS file provides geographic coordinates for the images captured within the
 
 ### GPS File Format
 
-The GPS file is a **plain text file** (space- or tab-separated). Each row corresponds to a single GPS record and follows this format:
+The GPS file is a **CSV file** (space- or tab-separated). Each row corresponds to a single GPS record and follows this format:
 
     longitude   latitude    time
     -88.85086167 35.631695  10:31:42
@@ -226,7 +226,7 @@ samples/
 │   ├── 10_43_43_985830.png
 │   └── 10_42_15_744794.png
 └── GPSData/
-    └── gps.txt
+    └── gps.csv
 ```
 
 ### Example Outputs (`results/`)
