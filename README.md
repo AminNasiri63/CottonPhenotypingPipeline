@@ -41,6 +41,7 @@ For each image, the pipeline performs the following steps:
 ├── config/           # Settings and logging
 ├── main.py           # Entry point (dependency injection)
 
+---
 
 ## Dataset Structure
 
