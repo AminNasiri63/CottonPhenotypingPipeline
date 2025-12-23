@@ -180,11 +180,43 @@ python main.py \
 ---
 
 ## Output
-### CSV Output (Example)
+
+The pipeline generates two primary outputs:
+
+1. A **CSV file** containing image-level greenness measurements  
+2. A **log file** (`run.log`) capturing execution details, warnings, and errors  
+
+---
+
+### CSV Output
+
+The CSV file contains one row per processed image (currently one patch per image).
+
+#### Columns
+
+| Column | Description |
+|------|-------------|
+| `folder_name` | Identifier of the plot or parent folder |
+| `image_path` | Absolute path to the processed image |
+| `lat` | Latitude in decimal degrees |
+| `long` | Longitude in decimal degrees |
+| `patch_id` | Patch identifier (currently always `0`, image-level analysis) |
+| `x` | Top-left x-coordinate of the analysis region (pixels) |
+| `y` | Top-left y-coordinate of the analysis region (pixels) |
+| `w` | Width of the analysis region (pixels) |
+| `h` | Height of the analysis region (pixels) |
+| `greenness_value` | Computed greenness index value |
+
+Since the current implementation performs **image-level analysis**, the analysis region (`x`, `y`, `w`, `h`) corresponds to the full image extent.
+
+---
+
+#### Example Row
+
 ```text
-image_path, plot_id, latitude, longitude, patch_id, greenness_value
-plot_001/images/img_001.jpg, plot_001, 35.912345, -83.941234, 0, 0.42
-```
+folder_name,image_path,lat,long,patch_id,x,y,w,h,greenness_value
+13,/home/amin/AminProjects/Cotton-2025/FLIRData/08/13/10_35_10_598522.png,-88.85078667,35.63161667,0,0,0,1855,1023,-0.142857134
+
 
 ---
 
