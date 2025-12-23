@@ -219,7 +219,7 @@ To facilitate quick testing and reproducibility, the repository includes a small
 
 The `samples/` directory contains a minimal dataset illustrating the expected input structure:
 
-```text
+```
 samples/
 ├── ImageData/
 │   ├── 10_42_29_495958.png
@@ -227,7 +227,24 @@ samples/
 │   └── 10_42_15_744794.png
 └── GPSData/
     └── gps.txt
-```text
+```
 
+### Example Outputs (`results/`)
+```
+results/
+├── sample_results.csv
+├── run.log
+└── figures/
+    ├── 10_42_29_495958.png
+    └── 10_43_43_985830.png
+    └── 10_42_15_744794.png
+```
 
+# License
+MIT License.
+
+---
+
+# Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
 
