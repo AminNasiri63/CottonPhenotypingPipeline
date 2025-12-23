@@ -123,8 +123,6 @@ Only the **`HH:MM:SS`** component of the filename is used for synchronization wi
 
 ## Installation
 
-## Installation
-
 1. Clone the repository:
     ```bash
     git clone https://github.com/AminNasiri63/CottonPhenotypingPipeline.git
@@ -151,7 +149,7 @@ If installation fails on some systems, SAM can be installed manually using:
 
 ```bash
 pip install git+https://github.com/facebookresearch/segment-anything.git
-pip install opencv-python torch torchvision
+pip install torch torchvision
 ```
 
 ---
