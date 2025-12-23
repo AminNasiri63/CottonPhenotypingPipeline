@@ -166,11 +166,11 @@ This project requires a SAM checkpoint file (model weights), which is **not incl
 
 1. Create the following directory (if it does not exist):
 
-    src/dlmodel/
+    src/dlModel/
 
 2. Download the official SAM checkpoint (e.g., `sam_vit_h_4b8939.pth`) from the Meta AI repository and place it here:
 
-    src/dlmodel/sam_vit_h_4b8939.pth
+    src/dlModel/sam_vit_h_4b8939.pth
 
 3. Update the checkpoint path in your configuration (if needed) to point to this file.
 
@@ -200,6 +200,36 @@ python main.py \
 | `--num-patches` | `int` | ❌ No | `1` | Number of analysis units per image (currently image-level; kept for future extensibility) |
 | `--segment-method` | `str` | ❌ No | `"nexg"` | Leaf segmentation method (`nexg`, `exg`, `hsv`, `sam`) |
 | `--green-indx` | `str` | ❌ No | `"ngrdi"` | Greenness index used for phenotyping (`ngrdi`, `exg`) |
+
+---
+## Visualization and Saving Behavior
+
+Visualization and figure saving behavior are configured **in `main.py`** when the `ImageProcessingPipeline` is instantiated, and are controlled by the following parameters in the pipeline configuration:
+
+- `show` (bool): Enable or disable on-screen visualization  
+- `save_fig` (bool): Enable or disable saving figures to disk  
+- `save_interval` (int): Frequency of visualization/saving  
+
+### Parameters
+
+- `show = False`  
+  If set to `True`, figures are displayed during processing.
+
+- `save_fig = False`  
+  If set to `True`, visualization figures are saved to the output directory.
+
+- `save_interval = 100`  
+  Controls how often figures are shown or saved.  
+  A value of `100` means that **every 100 processed images**, a visualization is shown and/or saved (depending on `show` and `save_fig`).
+
+### Notes
+
+- These parameters are configured within the `ImageProcessingPipeline`.
+- This design avoids excessive I/O and visualization overhead when processing large datasets.
+
+
+
+
 
 ---
 
