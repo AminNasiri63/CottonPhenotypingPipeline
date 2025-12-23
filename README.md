@@ -155,15 +155,27 @@ pip install torch torchvision
 ---
 
 ## Usage
+Run the pipeline from the command line as follows:
 ```bash
 python main.py \
   --input-root /path/to/dataset_root \
   --output-csv results.csv \
   --output-fig figures/ \
-  --num-patches 3
+  --num-patches 1 \
+  --segment-method nexg \
+  --green-indx ngrdi
 ```
 
----
+### Command-Line Arguments
+
+| Argument | Type | Required | Default | Description |
+|--------|------|----------|---------|-------------|
+| `--input-root` | `str` | ✅ Yes | — | Root directory of the dataset containing nested image and GPS folders |
+| `--output-csv` | `str` | ✅ Yes | — | Path to the output CSV file for greenness measurements |
+| `--output-fig` | `str` | ❌ No | `None` | Directory to save visualization figures (if not provided, figures are not saved) |
+| `--num-patches` | `int` | ❌ No | `1` | Number of analysis units per image (currently image-level; kept for future extensibility) |
+| `--segment-method` | `str` | ❌ No | `"nexg"` | Leaf segmentation method (`nexg`, `exg`, `hsv`) |
+| `--green-indx` | `str` | ❌ No | `"ngrdi"` | Greenness index used for phenotyping (`ngrdi`, `exg`) |
 
 ---
 
