@@ -32,7 +32,7 @@ For each image, the pipeline performs the following steps:
 
 ## Project Structure
 
-```text
+```
 .
 ├── domain/           # Core entities and abstract interfaces
 ├── application/      # Pipeline orchestration and use cases
@@ -47,31 +47,41 @@ For each image, the pipeline performs the following steps:
 
 ## Dataset Structure
 
-```text
+```
 dataset_root/
-├── plot_001/
-│   ├── images/
-│   │   ├── img_001.jpg
-│   │   ├── img_002.jpg
-│   │   └── img_003.jpg
-│   └── gps/
-│       └── gps.csv
-│
-├── plot_002/
-│   ├── images/
-│   │   ├── img_010.jpg
-│   │   ├── img_011.jpg
-│   │   └── img_012.jpg
-│   └── gps/
-│       └── gps.csv
-│
-└── plot_003/
-    ├── images/
-    │   └── ...
-    └── gps/
-        └── gps.csv
+├── ImageData/
+    ├── sample_001/
+    │   ├── sample_001_1/
+    │   │   ├── img1.jpg
+    │   │   ├── ...
+    │   └── sample_001_2/
+    │   │   ├── img1.jpg
+    │   │   ├── ...
+    │
+    ├── sample_002/
+    │   │   ├── img1.jpg
+    │   │   ├── ...
+
+├── GPSData/
+    ├── sample_001/
+    │   ├── sample_001_1/
+    │   │   ├── gps.csv
+    |
+    │   └── sample_001_2/
+    │   │   ├── gps.csv
+    │
+    ├── sample_002/
+    │   │   ├── gps.csv
+
 
 ```
+# Notes:
+- Each top-level folder (e.g., sample_001) represents a field plot, location, or experimental unit.
+- Image files are stored inside the images/ subfolder.
+- GPS metadata is stored separately in a corresponding gps/ subfolder.
+- The pipeline matches images to GPS information based on their parent folder.
+- Folder depth can be extended (e.g., by date or treatment), as long as the relative images/ ↔ gps/ relationship is preserved.
+
 
 ---
 
