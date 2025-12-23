@@ -174,7 +174,7 @@ python main.py \
 | `--output-csv` | `str` | ✅ Yes | — | Path to the output CSV file for greenness measurements |
 | `--output-fig` | `str` | ❌ No | `None` | Directory to save visualization figures (if not provided, figures are not saved) |
 | `--num-patches` | `int` | ❌ No | `1` | Number of analysis units per image (currently image-level; kept for future extensibility) |
-| `--segment-method` | `str` | ❌ No | `"nexg"` | Leaf segmentation method (`nexg`, `exg`, `hsv`) |
+| `--segment-method` | `str` | ❌ No | `"nexg"` | Leaf segmentation method (`nexg`, `exg`, `hsv`, `sam`) |
 | `--green-indx` | `str` | ❌ No | `"ngrdi"` | Greenness index used for phenotyping (`ngrdi`, `exg`) |
 
 ---
