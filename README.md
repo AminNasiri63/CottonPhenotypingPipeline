@@ -211,7 +211,23 @@ Since the current implementation performs **image-level analysis**, the analysis
 
 ---
 
+## Sample Data and Example Results
 
+To facilitate quick testing and reproducibility, the repository includes a small set of **sample images** and corresponding **example outputs**.
+
+### Sample Data (`samples/`)
+
+The `samples/` directory contains a minimal dataset illustrating the expected input structure:
+
+```text
+samples/
+├── ImageData/
+│   ├── 10_42_29_495958.png
+│   ├── 10_43_43_985830.png
+│   └── 10_42_15_744794.png
+└── GPSData/
+    └── gps.txt
+```text
 
 
 
