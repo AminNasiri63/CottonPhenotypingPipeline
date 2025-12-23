@@ -211,15 +211,6 @@ Since the current implementation performs **image-level analysis**, the analysis
 
 ---
 
-#### Example Row
-
-```text
-folder_name,image_path,lat,long,patch_id,x,y,w,h,greenness_value
-13,/home/amin/AminProjects/Cotton-2025/FLIRData/08/13/10_35_10_598522.png,-88.85078667,35.63161667,0,0,0,1855,1023,-0.142857134
-
-
----
-
 
 
 
