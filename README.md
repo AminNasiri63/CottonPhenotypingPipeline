@@ -75,30 +75,49 @@ dataset_root/
 
 
 ```
-# Notes:
+### Notes:
 - Each top-level folder (e.g., sample_001) represents a field plot, location, or experimental unit.
 - Image files are stored inside the ImageData/subfolder.
 - GPS metadata is stored separately in a corresponding GPSData/subfolder.
 - The pipeline matches images to GPS information based on their parent folder.
 - Folder depth can be extended (e.g., by date or treatment), as long as the relative images/ ↔ gps/ relationship is preserved.
 
-# GPS File Format
-
-Each GPS file provides geographic coordinates for the corresponding images.
-
-### Format
-
-The GPS file is a **plain text or CSV file** where each row corresponds to a single image and follows this format:
-
-```
-longitude   latitude    time
--88.85086167 35.631695  10:31:42
-```
-
-
-
 ---
 
 
+## GPS File Format and Image Association
 
+Each GPS file provides geographic coordinates for the images captured within the same folder.
+
+### GPS File Format
+
+The GPS file is a **plain text file** (space- or tab-separated). Each row corresponds to a single GPS record and follows this format:
+
+    longitude   latitude    time
+    -88.85086167 35.631695  10:31:42
+
+Header rows are optional. The pipeline assumes a fixed column order:
+
+1. Longitude (decimal degrees)
+2. Latitude (decimal degrees)
+3. Time (`HH:MM:SS`)
+
+### Image–GPS Association
+
+Image filenames are **timestamp-based**, for example:
+
+    10_42_29_495958.jpg
+
+Only the **`HH:MM:SS`** component of the filename is used for synchronization with GPS records.
+
+### Notes
+
+- The GPS timestamp corresponds to the image capture time.
+- Images are associated with GPS records based on **temporal alignment**.
+- If an exact timestamp match is not available, the **closest GPS record in time** is used.
+- Longitude and latitude are expressed in **decimal degrees**.
+- Image filenames must preserve the original timestamp structure to ensure correct matching.
+- This design enables reliable synchronization between image data and GPS logs collected during field acquisition.
+
+---
 
