@@ -153,3 +153,30 @@ pip install torch torchvision
 ```
 
 ---
+
+## Usage
+```bash
+python main.py \
+  --input-root /path/to/dataset_root \
+  --output-csv results.csv \
+  --output-fig figures/ \
+  --num-patches 3
+```
+
+---
+
+---
+
+## Output
+### CSV Output (Example)
+```text
+image_path, plot_id, latitude, longitude, patch_id, greenness_value
+plot_001/images/img_001.jpg, plot_001, 35.912345, -83.941234, 0, 0.42
+```
+
+---
+
+
+
+
+
