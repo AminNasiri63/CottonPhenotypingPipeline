@@ -40,3 +40,36 @@ For each image, the pipeline performs the following steps:
 ├── presentation/     # CLI and visualization
 ├── config/           # Settings and logging
 ├── main.py           # Entry point (dependency injection)
+
+
+## Dataset Structure
+
+```text
+dataset_root/
+├── plot_001/
+│   ├── images/
+│   │   ├── img_001.jpg
+│   │   ├── img_002.jpg
+│   │   └── img_003.jpg
+│   └── gps/
+│       └── gps.csv
+│
+├── plot_002/
+│   ├── images/
+│   │   ├── img_010.jpg
+│   │   ├── img_011.jpg
+│   │   └── img_012.jpg
+│   └── gps/
+│       └── gps.csv
+│
+└── plot_003/
+    ├── images/
+    │   └── ...
+    └── gps/
+        └── gps.csv
+
+
+
+
+
+
