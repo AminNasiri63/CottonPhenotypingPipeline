@@ -224,7 +224,7 @@ Visualization and figure saving behavior are configured **in `main.py`** when th
 
 ### Notes
 
-- These parameters are configured within the `ImageProcessingPipeline`.
+- These parameters are configured within the `ImageProcessingPipeline` class.
 - This design avoids excessive I/O and visualization overhead when processing large datasets.
 
 
