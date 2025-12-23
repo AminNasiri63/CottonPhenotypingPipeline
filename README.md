@@ -227,10 +227,6 @@ Visualization and figure saving behavior are configured **in `main.py`** when th
 - These parameters are configured within the `ImageProcessingPipeline` class.
 - This design avoids excessive I/O and visualization overhead when processing large datasets.
 
-
-
-
-
 ---
 
 ## Output
@@ -240,7 +236,6 @@ The pipeline generates two primary outputs:
 1. A **CSV file** containing image-level greenness measurements  
 2. A **log file** (`run.log`) capturing execution details, warnings, and errors  
 
----
 
 ### CSV Output
 
