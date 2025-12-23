@@ -289,6 +289,8 @@ results/
     └── 10_42_15_744794.png
 ```
 
+---
+
 # License
 MIT License.
 
