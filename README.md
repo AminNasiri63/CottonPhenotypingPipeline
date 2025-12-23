@@ -36,12 +36,12 @@ For each image, the pipeline performs the following steps:
 
 CottonPhenotypingPipeline/
 ├── src/
+│   ├── application/
+│   ├── config/
 │   ├── dlmodel/
 │   ├── domain/
-│   ├── application/
 │   ├── infrastructure/
 │   ├── presentation/
-│   ├── config/
 │   └── main.py
 │
 ├── samples/
