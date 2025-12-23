@@ -2,18 +2,16 @@
 
 A Python-based pipeline for **cotton plant phenotyping from RGB field images**, designed to measure **leaf greenness indices** as indicators of plant health, nitrogen status, and growth vigor.
 
-The system integrates **color-checker-based color calibration**, **leaf segmentation**, and **patch-level analysis** in a modular and research-oriented architecture.
+The system integrates **color-checker-based color calibration** and **leaf segmentation** in a modular and research-oriented architecture.
 
 ---
 
 ## Features
 
 - Automatic **color checker detection** for illumination-robust color calibration  
-- **Leaf segmentation** using vegetation indices (NExG, ExG, HSV-based methods)  
-- **Patch-based greenness analysis** for localized phenotyping  
-- Supports multiple **greenness indices** (e.g., ExG, NGRDI)  
-- Batch processing of large field datasets  
-- Optional **visual diagnostics** for quality control  
+- **Leaf segmentation** using vegetation indices and deep model (NExG, ExG, HSV, SAM-based methods)  
+- **Image-level greenness analysis** using segmented leaf pixels
+- Supports multiple **greenness indices** (e.g., ExG, NGRDI)   
 - Structured **CSV export** for statistical analysis  
 
 ---
@@ -23,9 +21,9 @@ The system integrates **color-checker-based color calibration**, **leaf segmenta
 For each image, the pipeline performs the following steps:
 
 1. Load RGB image  
-2. Detect color checker and calibrate image colors  
+2. Detect the color checker and calibrate image colors  
 3. Segment leaf regions  
-4. Select analysis patches  
+4. Treat the entire image as a single analysis unit  
 5. Compute greenness index on leaf pixels  
 6. Aggregate and export results  
 7. (Optional) Save visualization figures  
