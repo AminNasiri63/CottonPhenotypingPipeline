@@ -168,7 +168,7 @@ This project requires a SAM checkpoint file (model weights), which is **not incl
 
     src/dlmodel/
 
-2. Download a SAM checkpoint (e.g., `sam_vit_h_4b8939.pth`) from the official SAM repository and place it here:
+2. Download the official SAM checkpoint (e.g., `sam_vit_h_4b8939.pth`) from the Meta AI repository and place it here:
 
     src/dlmodel/sam_vit_h_4b8939.pth
 
