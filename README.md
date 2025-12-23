@@ -123,8 +123,35 @@ Only the **`HH:MM:SS`** component of the filename is used for synchronization wi
 
 ## Installation
 
+## Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/AminNasiri63/CottonPhenotypingPipeline.git
+    cd CottonPhenotypingPipeline
+    ```
+
+2. (Recommended) Create and activate a virtual environment:
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate   # macOS/Linux
+    # .venv\Scripts\activate    # Windows
+    ```
+
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+### Notes on SAM Installation
+
+This pipeline uses **Segment Anything (SAM)** for optional leaf segmentation.
+
+If installation fails on some systems, SAM can be installed manually using:
+
+```bash
+pip install git+https://github.com/facebookresearch/segment-anything.git
+pip install opencv-python torch torchvision
 ```
-git clone <repository-url>
-cd cotton-phenotyping
-pip install -r requirements.txt
-```
+
+---
