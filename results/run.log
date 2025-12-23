@@ -1,0 +1,14 @@
+WARNING | infrastructure.file_discovery | [WARN] for /home/amin/AminProjects/Cotton-2025/FLIRData/09/03/10_56_31_564366.png: Image time is not in GPS data. Last time is used.
+INFO | application.services | 3522 samples read; starting analysis.
+WARNING | application.services | [WARN] at step Checker Detector for 10_45_49_584589.png: No ColorChecker detected.
+WARNING | application.services | [WARN] at step Leaf Segmentor for 10_39_33_294413.png: No leaf detected.
+INFO | application.services | 25 of 3522 samples analyzed.
+
+.
+.
+.
+.
+.
+
+INFO | application.services | Exporting data/results to a CSV file.
+INFO | application.services | Data export to CSV completed successfully.
