@@ -36,28 +36,18 @@ For each image, the pipeline performs the following steps:
 
 CottonPhenotypingPipeline/
 ├── src/
-│   ├── application/
-│   ├── config/
-│   ├── dlmodel/
-│   ├── domain/
-│   ├── infrastructure/
-│   ├── presentation/
-│   └── main.py
+│   ├── application/      # Pipeline orchestration and use cases
+│   ├── config/           # Settings and logging
+│   ├── dlmodel/          # SAM checkpoint
+│   ├── domain/           # Core entities and abstract interfaces
+│   ├── infrastructure/   # OpenCV, DL models, file I/O, adapters
+│   ├── presentation/     # CLI and visualization
+│   └── main.py           # Entry point (dependency injection)
 │
 ├── samples/
 ├── results/
 ├── requirements.txt
 └── README.md
-
-
-
-.
-├── domain/           # Core entities and abstract interfaces
-├── application/      # Pipeline orchestration and use cases
-├── infrastructure/   # OpenCV, DL models, file I/O, adapters
-├── presentation/     # CLI and visualization
-├── config/           # Settings and logging
-├── main.py           # Entry point (dependency injection)
 
 ```
 
@@ -169,6 +159,22 @@ If installation fails on some systems, SAM can be installed manually using:
 pip install git+https://github.com/facebookresearch/segment-anything.git
 pip install torch torchvision
 ```
+
+### SAM Weights (Checkpoint)
+
+This project requires a SAM checkpoint file (model weights), which is **not included** in the repository.
+
+1. Create the following directory (if it does not exist):
+
+    src/dlmodel/
+
+2. Download a SAM checkpoint (e.g., `sam_vit_h_4b8939.pth`) from the official SAM repository and place it here:
+
+    src/dlmodel/sam_vit_h_4b8939.pth
+
+3. Update the checkpoint path in your configuration (if needed) to point to this file.
+
+> Note: The checkpoint file is large and is intentionally excluded from version control.
 
 ---
 
