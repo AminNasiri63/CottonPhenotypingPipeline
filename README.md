@@ -4,7 +4,8 @@ A Python-based pipeline for **cotton plant phenotyping from RGB field images**, 
 
 The system integrates **color-checker-based color calibration** and **leaf segmentation** in a modular and research-oriented architecture.
 
-<img width="4770" height="972" alt="10_43_43_985830" src="https://github.com/user-attachments/assets/c4417338-0f25-47ac-a4de-6b11238f16bf" />
+<img width="2384" height="436" alt="10_43_43_985830" src="https://github.com/user-attachments/assets/ca049fd2-40b7-4095-8956-09e6206af3be" />
+
 
 ---
 
