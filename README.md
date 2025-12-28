@@ -15,7 +15,8 @@ The system integrates **color-checker-based color calibration** and **leaf segme
 - **Leaf segmentation** using vegetation indices and deep model (NExG, ExG, HSV, SAM-based methods)  
 - **Image-level greenness analysis** using segmented leaf pixels
 - Supports multiple **greenness indices** (e.g., ExG, NGRDI)   
-- Structured **CSV export** for statistical analysis  
+- Structured **CSV export** for statistical analysis
+- **Clean Architecture–based design** with clear separation between domain logic, application services, and infrastructure components, enabling modularity, testability, and easy extension
 
 ---
 
